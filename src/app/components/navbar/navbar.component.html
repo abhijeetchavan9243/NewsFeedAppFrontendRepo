@@ -1,0 +1,42 @@
+<mat-toolbar color="primary">
+  <a
+    [routerLink]="'/home'"
+    [routerLinkActive]="'active'"
+    mat-icon-button
+    color="primary"
+    mat-mini-fab
+  >
+    <mat-icon>home</mat-icon>
+  </a>
+  <span class="ml-10">News Feed App</span>
+  <span class="example-spacer"></span>
+  <a
+    *ngIf="!login.isLoggedIn()"
+    mat-raised-button
+    [routerLink]="'/login'"
+    [routerLinkActive]="'active'"
+    class="mr-15"
+    >Login</a
+  >
+  <a
+    *ngIf="!login.isLoggedIn()"
+    mat-raised-button
+    [routerLink]="'/signup'"
+    [routerLinkActive]="'active'"
+    >Sign Up</a
+  >
+  <a
+    class="mr-15"
+    *ngIf="login.isLoggedIn()"
+    mat-raised-button
+    routerLink="/user-dashboard/profile"
+    >{{login.getUser().userName}}</a
+  >
+  <a
+    (click)="logout()"
+    *ngIf="login.isLoggedIn()"
+    mat-raised-button
+    >Logout</a
+  >
+  
+</mat-toolbar>

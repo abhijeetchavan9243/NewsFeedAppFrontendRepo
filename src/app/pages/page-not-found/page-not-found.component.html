@@ -1,0 +1,19 @@
+<div class="bootstrap-wrapper">
+  <div class="container col-md-8 offset-md-2 mt-5">
+    <mat-card>
+      <img mat-card-image src="../../../assets/404-error-not-found.png" />
+      <mat-card-actions>
+        <div class="container text-center">
+          <button *ngIf="!login.isLoggedIn()" mat-raised-button color="primary" routerLink="">
+            Return to Home
+          </button>
+        </div>
+        <div class="container text-center">
+          <button *ngIf="login.isLoggedIn()" mat-raised-button color="primary" routerLink="/user-dashboard/">
+            Return to Home
+          </button>
+        </div>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+.abhijeet-image {
+  background-image: url("../../../../assets/abhijeet.jpg");
+  background-size: cover;
+}
+.example-card {
+  max-width: 400px;
+}
+.k-image {
+  background-image: url("../../../../assets/k.jpeg");
+  background-size: cover;
+}
+.r-image {
+  background-image: url("../../../../assets/r.jpeg");
+  background-size: cover;
+}
+.re-image {
+  background-image: url("../../../../assets/revat.jpeg");
+  background-size: cover;
+}

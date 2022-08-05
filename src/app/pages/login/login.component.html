@@ -1,0 +1,56 @@
+<div class="bootstrap-wrapper">
+  <div class="container">
+    <div class="row" style="margin-top: 60px">
+      <div class="col-md-6 offset-md-3">
+        <mat-card>
+          <div class="container text-center">
+            <img src="../../../assets/log-in.png" alt="" />
+          </div>
+          <!-- {{loginData | json}} -->
+          <form #loginForm="ngForm" (ngSubmit)="formSubmit()">
+            <!-- Username  -->
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>Username</mat-label>
+              <input
+                [(ngModel)]="loginData.userName"
+                email
+                name="userName"
+                type="email"
+                required
+                matInput
+                placeholder="Enter Username"
+              />
+            </mat-form-field>
+            <!-- password -->
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>Password</mat-label>
+              <input
+                [(ngModel)]="loginData.password"
+                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+                minlength="8"
+                name="password"
+                type="password"
+                required
+                matInput
+                placeholder="Enter Password"
+              />
+            </mat-form-field>
+            <div class="container text-center">
+              <button
+                [disabled]="loginForm.invalid"
+                type="submit"
+                mat-raised-button
+                color="primary"
+              >
+                Login
+              </button>
+            </div>
+            <div class="container mt-3">
+              Don't have an account? <a routerLink="/signup">Register here</a>
+            </div>
+          </form>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>

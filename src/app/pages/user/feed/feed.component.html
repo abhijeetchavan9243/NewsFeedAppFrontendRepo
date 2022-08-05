@@ -1,0 +1,21 @@
+<div class="container mt-3" *ngFor="let article of articles">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>{{ article.title }}</mat-card-title>
+      <mat-card-subtitle> {{ article.author }} </mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="{{article.urlToImage}}" alt="No Image" />
+    <mat-card-content>
+      <p>{{ article.description }}</p>
+      <p>{{ article.publishedAt }}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary">
+        <a target="_blank" href="{{article.url}}">Read more...</a>
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+<!-- {{articles|json}}
+<img src="{{articles[0].urlToImage}}" alt=""> -->
+

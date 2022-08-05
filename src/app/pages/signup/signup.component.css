@@ -1,0 +1,9 @@
+#sign-up-title {
+  background: #2dfa34;
+  background: linear-gradient(to right, #2dfa34 0%, #0606cf 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.full-width {
+  width: 100%;
+}
